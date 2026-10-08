@@ -17,6 +17,6 @@ The catalog generator publishes the latest stable SemVer tag and the latest SemV
 
 ## Add another module
 
-Create a directory named after the NS8 module ID, add its metadata.json and a 256×256 PNG logo, then commit the change to main. The image source in metadata.json must refer to a public GHCR package with SemVer tags. Optional screenshots go in a screenshots directory as PNG files.
+Create a top-level directory named after the NS8 module ID and add its `metadata.json` and a 256×256 PNG logo. Any top-level directory containing `metadata.json` is indexed automatically after a push to `main`. The image source in `metadata.json` must refer to a public GHCR package with SemVer tags. Optional screenshots go in a `screenshots` directory as PNG files.
 
 The catalog is generated with the NethServer createrepo.py script. Its upstream source and GPL license notice are preserved in the script.

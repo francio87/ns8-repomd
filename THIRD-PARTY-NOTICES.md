@@ -4,3 +4,7 @@ https://github.com/NethServer/ns8-repomd
 Copyright (C) 2021 Nethesis S.r.l. The script is free software under the
 GNU General Public License, version 3 or (at your option) any later version.
 See COPYING.
+
+The screenshots in `borgbackupserver/screenshots/` are sourced from the
+Borg Backup Server upstream README:
+https://github.com/marcpope/borgbackupserver

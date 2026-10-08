@@ -34,8 +34,16 @@ jobs:
       - name: Generate repository metadata
         run: |
           mkdir -p _site
-          cp -a borgbackupserver _site/
-          python createrepo.py _site
+          app_count=0
+          for app_dir in */; do
+            if [ -f "${app_dir}metadata.json" ]; then
+              cp -a "$app_dir" _site/
+              app_count=$((app_count + 1))
+            fi
+          done
+          test "$app_count" -gt 0
+          cp pins.yml _site/
+          (cd _site && python ../createrepo.py .)
           test -s _site/repodata.json
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
