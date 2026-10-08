@@ -7,7 +7,7 @@ This is a public NethServer 8 software catalog. It currently indexes the Borg Ba
 In Cluster Admin, open Software Center → Software repositories → Add repository and use:
 
 - Name: Francio87 NS8 apps
-- URL: https://francio87.github.io/ns8-repomd/repodata.json
+- URL: https://francio87.github.io/ns8-repomd/
 
 The catalog metadata is rebuilt four times a day and after changes to this repository. New module image tags are discovered from the public GHCR package.
 
