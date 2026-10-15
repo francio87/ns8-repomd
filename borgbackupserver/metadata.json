@@ -4,7 +4,7 @@
     "en": "Manage BorgBackup clients, repositories, schedules, and restores."
   },
   "categories": [
-    "Backup"
+    "backup"
   ],
   "authors": [
     {
