@@ -114,6 +114,8 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
     with open(metadata_file) as metadata_fp:
         # merge defaults and JSON file, the latter one has precedence
         metadata = {**metadata, **json.load(metadata_fp)}
+    for author in metadata["authors"]:
+        author.setdefault("email", "davide@franceschelli.eu")
 
     # download logo if not present
     # add it only if it's a PNG
